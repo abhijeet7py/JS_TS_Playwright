@@ -54,3 +54,29 @@ for (let i = 0; i < marks.length; i++)
     sum = sum + marks[i]
 }
 console.log(sum)
+
+let total = marks.reduce((sum,mark) => sum + mark,0)
+console.log(total)
+
+
+scores = [20, 12, 13, 15, 16, 18, 19]
+
+evenScore = []
+
+for (let i= 0; i < scores.length; i++)
+{
+    if (scores[i] % 2 == 0)
+    {
+        evenScore.push(scores[i])
+    }
+}
+console.log(evenScore)
+
+let evenScores = scores.filter(score => score%2 == 0)
+console.log(evenScores)
+
+let mappedscores = evenScores.map(score => score*3)
+console.log(mappedscores)
+
+let totalval = mappedscores.reduce((sum, val) => sum + val,0)
+console.log(totalval)
