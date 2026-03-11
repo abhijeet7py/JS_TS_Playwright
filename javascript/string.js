@@ -16,3 +16,19 @@ let nextDate = '31'
 
 let diff = parseInt(nextDate) - parseInt(date)
 console.log(diff)
+
+let news = day + "today is a good day and another day is coming"
+console.log(news)
+
+
+let count = 0
+let indexes = []
+let value = news.indexOf("day")
+while(value !== -1)
+{
+    count++
+    indexes.push(value)
+    value = news.indexOf("day", value+1)
+}
+console.log(count)
+console.log(indexes)
