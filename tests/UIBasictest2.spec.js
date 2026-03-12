@@ -8,7 +8,7 @@ const {test} = require('@playwright/test');
 // Which browser to use is determined by the configuration file 
 // (playwright.config.js)
 
-test.only('Playwright test', async ({browser})=> 
+test('Playwright test', async ({browser})=> 
 {
     // creating a browser context
     const context = await browser.newContext();

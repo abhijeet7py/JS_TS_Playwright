@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 
 // Creating a assertion to check the page title
-test.only("Get Page titile", async ({browser, page})=>
+test("Get Page titile", async ({browser, page})=>
 {
     await page.goto("https://www.google.com/");
     console.log(await page.title());
