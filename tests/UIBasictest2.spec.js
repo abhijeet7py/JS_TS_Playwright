@@ -8,7 +8,7 @@ const {test} = require('@playwright/test');
 // Which browser to use is determined by the configuration file 
 // (playwright.config.js)
 
-test('Playwright test', async ({browser})=> 
+test.only('Playwright test', async ({browser})=> 
 {
     // creating a browser context
     const context = await browser.newContext();
@@ -27,5 +27,5 @@ test('Playwright test', async ({browser})=>
 test('Playwright test without broser context', async ({browser,page})=>
 {
     // navigating to the specified URL
-    await page.goto("https://katalon-demo-cura.herokuapp.com/#")
+    await page.goto("https://www.google.com")
 })
