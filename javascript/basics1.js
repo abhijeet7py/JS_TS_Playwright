@@ -1,15 +1,18 @@
+// To print something on the console we use console.log() function
+
 console.log("Hello World!");
 
 // This is single line comment
 
 /*
-
+This is multi line comment
 */
 
+// In JavaScript we have 7 data types
 let a = 4
 console.log(a)
 
-console.log(typeof(a))
+console.log(typeof(a)) // typeof is a operator which gives the data type of the variable
 
 let b = 234.12
 console.log(typeof(b))
