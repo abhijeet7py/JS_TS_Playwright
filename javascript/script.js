@@ -49,3 +49,28 @@ console.log("Hello, World!");
 //         console.log(i);
 //     }
 // }
+
+
+// Array
+
+// marks =  [90, 80, 70, 60, 50];
+// // console.log(marks);
+
+// // find the avg
+// // let sum = 0
+// // for(let i of marks){
+// //     sum += i;
+// // }
+// // console.log(sum);
+
+// // let avg = sum / marks.length
+
+// // console.log(`avg is : ${avg}`)
+
+// // splice method
+
+// console.log(marks.splice(1,2,34,56,34));
+// console.log(marks);
+
+let componies = ["Google", "Meta", "Amazon", "Microsoft", "Apple"];
+console.log(componies);
