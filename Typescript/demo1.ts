@@ -21,3 +21,17 @@ console.log(age1);
 console.log(flag1);
 console.log(num);
 console.log(city);
+
+
+
+// functions in  Typescript
+
+function add(a:number, b: number): number{
+    return a + b;
+}
+
+let sum = add(5, 10); // error : Argument of type 'string' is not assignable to parameter of type 'number'.
+
+// onjects in Typescript
+
+let user : {name: string, age: number} = {name: "Abhijeet", age: 26};
