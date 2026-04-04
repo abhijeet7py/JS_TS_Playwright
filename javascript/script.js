@@ -36,9 +36,9 @@ console.log("Hello, World!");
 
 // For of loop
 
-// str = "Abhijeet";
+// str1 = "Abhijeet";
 
-// for(let i of str){ // iterator
+// for(let i of str1){ // iterator
 //     console.log(i);
 // }
 
@@ -72,5 +72,48 @@ console.log("Hello, World!");
 // console.log(marks.splice(1,2,34,56,34));
 // console.log(marks);
 
-let componies = ["Google", "Meta", "Amazon", "Microsoft", "Apple"];
-console.log(componies);
+// let componies = ["Google", "Meta", "Amazon", "Microsoft", "Apple"];
+// console.log(componies);
+
+
+//funtion
+
+// function sum (a,b){
+//     console.log(a + b);
+// }
+// sum(10, 20);
+
+// // arrow function
+
+// const mul = (a , b) =>{
+//     return a * b;
+// }
+
+
+function count_vowels (str){
+    let count = 0;
+    for(let i of str.toLowerCase()){
+        if("aeiou".includes(i)){
+            count++;
+        }
+    }
+    return count;
+}
+
+let str = "Abhijeet";
+let count = count_vowels(str);
+console.log(`The number of vowels in the string ${str} is : ${count}`);
+
+const count_vow = (str1) =>{
+    let count1 = 0;
+    for(let i of str1.toLowerCase()){
+        if("aeiou".includes(i)){
+            count1++;
+        }
+    }
+    return count1;
+}
+
+let str1 = "Abhijeet";
+let count1= count_vowels(str1);
+console.log(`The number of vowels in the string ${str1} is : ${count1}`);
