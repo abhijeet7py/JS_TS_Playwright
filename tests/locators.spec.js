@@ -45,4 +45,9 @@ test.only("Locators in playwright with multiple elements", async ({browser, page
     console.log(await page.locator(".card-body a").first().textContent());
     // to get the text content of the nth element
     console.log(await page.locator(".card-body a").nth(1).textContent());
+
+    // To get all the text content of the elements in an array
+
+    const allTitles = await page.locator(".card-body a").allTextContents();
+    console.log(allTitles);
 })
