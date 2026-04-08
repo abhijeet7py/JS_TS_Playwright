@@ -30,6 +30,11 @@ test.only("Handling Dropdowns", async ({browser, page}) => {
     await page.locator("#terms").uncheck();
     expect(await page.locator("#terms").isChecked()).toBeFalsy();
 
+    // Adding assertion to check if a attribute has a value or not
+    const blinkingLink = page.locator("[href*='documents-request']");
+    await expect(blinkingLink).toHaveAttribute("class", "blinkingText")
+
+
 
 
     //await page.pause();
