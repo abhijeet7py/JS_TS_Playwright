@@ -74,6 +74,38 @@ test("End to End Automation practise", async ({browser, page}) => {
         }
     }
 
+    await page.locator("input[value='4542 9931 9292 2293']").fill("1234 5668 7890 4567");
+    await(page.locator("select[class='input ddl']")).first().selectOption("07");
+    await(page.locator("select[class='input ddl']")).last().selectOption("28");
+    await page.locator("div[class='field small'] [type='text']").first().fill("1234");
+    await page.locator("div[class='field'] [type='text']").last().fill("Abhijeet Kumar");
+    await page.locator("div[class='field small'] [type='text']").last().fill("rahulshettyacademy");
+    await page.locator("div[class='field small'] button").click();
+    const couponText = await page.locator(".mt-1.ng-star-inserted").textContent();
+    console.log(couponText);
+    expect(page.locator(".mt-1.ng-star-inserted")).toHaveText("* Coupon Applied");
+    expect(page.locator("label[type='text']")).toHaveText("abhijeet77@gmail.com");
+    await page.locator(".action__submit").click();
+
+    await expect(page.locator(".hero-primary")).toHaveText(" Thankyou for the order. ");
+    const orderID = await page.locator(".em-spacer-1 .ng-star-inserted").textContent();
+    console.log(orderID);
+    await page.locator("button[routerlink*='myorders']").click();
+    await page.locator("tbody").waitFor();
+    const rows = await page.locator("tbody tr").count();
+
+    for(let i=0; i<rows; i++){
+        const rowId = await page.locator("tbody tr").nth(i).locator("th").textContent();
+        if(orderID.includes(rowId))
+        {
+            await page.locator("tbody tr").nth(i).locator("button").first().click();
+            break;
+        }
+    }
+    const orderIdDetails = await page.locator(".col-text").textContent();
+    expect(orderID.includes(orderIdDetails)).toBeTruthy();
+
+
 
 
 
@@ -96,5 +128,5 @@ test("End to End Automation practise", async ({browser, page}) => {
 
 
 
-    await page.pause();
+    // await page.pause();
 })
